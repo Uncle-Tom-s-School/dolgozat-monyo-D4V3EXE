@@ -15,7 +15,7 @@ const BeerCard = (props: BeerCardType) => {
     <p>ABV: {props.abv}%</p>
     <p>Volume: {props.volume}ml</p>
     <p>Price: {props.price} Ft</p>
-    <p>{props.available ? "Raktáron" : "Nincs készleten"}</p>
+    {props.available ? <strong className="available">Raktáron</strong> : <strong className="notAvailable">Nincs készleten</strong>}
     </div>
   )
 }
